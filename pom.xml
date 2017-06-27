@@ -62,16 +62,14 @@
 				<configuration>
 					<tomeeVersion>7.0.2</tomeeVersion>
 					<tomeeClassifier>plus</tomeeClassifier>
-					
-				</configuration>
-				 <configuration>
-				     <configuration>
-				    <type>runtime</type>
+					<type>runtime</type>
 				    <properties>
 				      <cargo.remote.username>tomee</cargo.remote.username>
 				      <cargo.remote.password>saphira</cargo.remote.password>
 				    </properties>
-				  </configuration>
+					
+				</configuration>
+				 
 			</plugin>
 		</plugins>
 	</build>
