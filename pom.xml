@@ -69,14 +69,11 @@
 				    </properties>
 					
 				</configuration>
-				<plugins>
-			      <plugin>
-				<groupId>org.codehaus.cargo</groupId>
+				
+				 <groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven2-plugin</artifactId>
-			      </plugin>
-			    </plugins>
-				 
 			</plugin>
+			
 		</plugins>
 	</build>
 </project>
