@@ -56,8 +56,8 @@
 				<!-- le plugin pour démarrer TomEE depuis la ligne de commande avec maven :
 				       mvn package tomee:run
 				-->
-				<groupId>org.apache.tomee.maven</groupId>
-				<artifactId>tomee-maven-plugin</artifactId>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
 				<version>7.0.2</version>
 				<configuration>
 					<tomeeVersion>7.0.2</tomeeVersion>
@@ -70,8 +70,7 @@
 					
 				</configuration>
 				
-				 <groupId>org.codehaus.cargo</groupId>
-				<artifactId>cargo-maven2-plugin</artifactId>
+				 
 			</plugin>
 			
 		</plugins>
