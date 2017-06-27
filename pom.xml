@@ -65,25 +65,63 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.cargo</groupId>
-				<artifactId>cargo-maven2-plugin</artifactId>
-				<version>1.4.4</version>
-				<configuration>
-					<container>
-						<containerId>tomcat7x</containerId>
-						<type>remote</type>
-					</container>
-
-				<configuration>
-					<type>runtime</type>
-						<properties>
-								<cargo.hostname>10.126.43.136</cargo.hostname>
-								<cargo.servlet.port>8080</cargo.servlet.port>
-								<cargo.remote.username>tomee</cargo.remote.username>
-								<cargo.remote.password>saphira</cargo.remote.password>
-						</properties>
-				</configuration>
-			</configuration>
+				 <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+            <configuration>
+                <wait>true</wait>
+                <container>
+                    <containerId>tomcat8x</containerId>
+                    <type>remote</type>
+                </container>
+                <configuration>
+                    <type>remote</type> 
+                    <properties>
+                        <cargo.tomcat.manager.url>https://10.126.43.136:8080/manager</cargo.tomcat.manager.url>
+                        <cargo.remote.username>tomee</cargo.remote.username>
+                        <cargo.remote.password>saphira</cargo.remote.password>
+                    </properties>
+                </configuration>
+                <deployer>
+                    <type>installed</type>
+                    <deployables>
+                        <deployable>
+                            <groupId>com.waltercedric</groupId>
+                            <artifactId>myapplication-web</artifactId>
+                            <type>war</type>
+                        </deployable>
+                    </deployables>
+                </deployer>
+            </configuration>
+            <executions>
+                <execution>
+                    <id>start-container</id>
+                    <phase>pre-integration-test</phase>
+                    <goals>
+                        <goal>deployer-deploy</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>stop-container</id>
+                    <phase>post-integration-test</phase>
+                    <goals>
+                        <goal>deployer-undeploy</goal>
+                    </goals>
+                </execution>
+                <execution>
+                    <id>verify-deploy</id>
+                    <phase>install</phase>
+                    <goals>
+                        <goal>deployer-deploy</goal>
+                    </goals>
+                </execution> 
+                <execution>
+                    <id>clean-undeploy</id>
+                    <phase>pre-clean</phase>
+                    <goals>
+                        <goal>deployer-undeploy</goal>
+                    </goals>
+                </execution> 
+            </executions>
 			</plugin>
 		</plugins>
 	</build>
