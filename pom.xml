@@ -49,39 +49,6 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-	<configuration>
-
-  <!-- Container configuration -->
-  <container>
-    <containerId>tomcat6x</containerId>
-    <type>remote</type>
-  </container>
-
-  <!-- Configuration to use with the container (which will also configure the deployer) -->
-  <configuration>
-    <type>runtime</type>
-    <properties>
-      <cargo.remote.username>username</cargo.remote.username>
-      <cargo.remote.password>password</cargo.remote.password>
-    </properties>
-  </configuration>
-
-  <!-- Deployables configuration -->
-  <deployables>
-    <deployable>
-      <groupId>war group id</groupId>
-      <artifactId>war artifact id</artifactId>
-      <type>war</type>
-      <properties>
-        <context>optional root context</context>
-      </properties>
-      <pingURL>optional url to ping to know if deployable is done or not</pingURL>
-      <pingTimeout>optional timeout to ping (default 20000 milliseconds)</pingTimeout>
-    </deployable>
-    [...]
-  </deployables>
-
-</configuration>
 
 	<build>
 		<plugins>
