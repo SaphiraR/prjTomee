@@ -65,12 +65,25 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<type>runtime</type>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven2-plugin</artifactId>
+				<version>1.4.4</version>
+				<configuration>
+					<container>
+						<containerId>tomcat7x</containerId>
+						<type>remote</type>
+					</container>
+
+				<configuration>
+					<type>runtime</type>
 						<properties>
 								<cargo.hostname>10.126.43.136</cargo.hostname>
 								<cargo.servlet.port>8080</cargo.servlet.port>
 								<cargo.remote.username>tomee</cargo.remote.username>
 								<cargo.remote.password>saphira</cargo.remote.password>
+						</properties>
+				</configuration>
+			</configuration>
 			</plugin>
 		</plugins>
 	</build>
