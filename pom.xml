@@ -7,7 +7,7 @@
 	<artifactId>exo2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	
+
 	<!-- précisez le nom et l'email de chaque membre de votre groupe -->
 	<developers>
 		<developer>
@@ -56,23 +56,22 @@
 				<!-- le plugin pour démarrer TomEE depuis la ligne de commande avec maven :
 				       mvn package tomee:run
 				-->
-				<groupId>org.codehaus.cargo</groupId>
-				<artifactId>cargo-maven2-plugin</artifactId>
+				<groupId>org.apache.tomee.maven</groupId>
+				<artifactId>tomee-maven-plugin</artifactId>
 				<version>7.0.2</version>
 				<configuration>
 					<tomeeVersion>7.0.2</tomeeVersion>
 					<tomeeClassifier>plus</tomeeClassifier>
-					<type>runtime</type>
-				    <properties>
-				      <cargo.remote.username>tomee</cargo.remote.username>
-				      <cargo.remote.password>saphira</cargo.remote.password>
-				    </properties>
-					
 				</configuration>
-				
-				 
 			</plugin>
-			
+			<plugin>
+				<type>runtime</type>
+						<properties>
+								<cargo.hostname>10.126.43.136</cargo.hostname>
+								<cargo.servlet.port>8080</cargo.servlet.port>
+								<cargo.remote.username>tomee</cargo.remote.username>
+								<cargo.remote.password>saphira</cargo.remote.password>
+			</plugin>
 		</plugins>
 	</build>
 </project>
