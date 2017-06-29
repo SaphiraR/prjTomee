@@ -71,7 +71,7 @@
                 <wait>true</wait>
                 <container>
                     <containerId>tomee7x</containerId>
-                    <type>remote</type>
+                    <type>runtime</type>
                 </container>
                 <configuration>
                     <type>remote</type> 
