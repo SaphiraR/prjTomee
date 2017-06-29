@@ -70,7 +70,7 @@
             <configuration>
                 <wait>true</wait>
                 <container>
-                    <containerId>tomcat7x</containerId>
+                    <containerId>saphiraTomee</containerId>
                     <type>remote</type>
                 </container>
                 <configuration>
