@@ -74,7 +74,7 @@
                     <type>runtime</type>
                 </container>
                 <configuration>
-                    <type>remote</type> 
+                    
                     <properties>
                         <cargo.tomcat.manager.url>https://10.126.43.109:8080/manager</cargo.tomcat.manager.url>
                         <cargo.remote.username>tomee</cargo.remote.username>
