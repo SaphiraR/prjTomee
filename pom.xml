@@ -76,7 +76,8 @@
                 <configuration>
                     
                     <properties>
-                        <cargo.tomcat.manager.url>https://10.126.43.109:8080/manager</cargo.tomcat.manager.url>
+                        <cargo.host>10.126.43.136</cargo.host>
+			<cargo.port>8080</cargo.port>
                         <cargo.remote.username>tomee</cargo.remote.username>
                         <cargo.remote.password>saphira</cargo.remote.password>
                     </properties>
