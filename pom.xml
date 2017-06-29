@@ -85,9 +85,7 @@
                     <type>installed</type>
             
                         
-                            <groupId>com.waltercedric</groupId>
-                            <artifactId>myapplication-web</artifactId>
-                            <type>war</type>
+                            
                         
                 </deployer>
             </configuration>
