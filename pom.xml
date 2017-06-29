@@ -78,8 +78,8 @@
 					    <properties>
 						<cargo.host>10.126.43.136</cargo.host>
 						<cargo.port>8080</cargo.port>
-						<cargo.remote.username>tomee</cargo.remote.username>
-						<cargo.remote.password>tomee</cargo.remote.password>
+						<cargo.remote.username>saphira</cargo.remote.username>
+						<cargo.remote.password>saphira</cargo.remote.password>
 					    </properties>
 					</configuration>
 					
