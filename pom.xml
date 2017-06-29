@@ -70,7 +70,7 @@
             <configuration>
                 <wait>true</wait>
                 <container>
-                    <containerId>Tomee7x</containerId>
+                    <containerId>tomee7x</containerId>
                     <type>remote</type>
                 </container>
                 <configuration>
