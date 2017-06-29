@@ -84,12 +84,11 @@
                 <deployer>
                     <type>installed</type>
             
-                        <deployable>
+                        
                             <groupId>com.waltercedric</groupId>
                             <artifactId>myapplication-web</artifactId>
                             <type>war</type>
-                        </deployable>
-                    
+                        
                 </deployer>
             </configuration>
             <executions>
