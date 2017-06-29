@@ -83,13 +83,13 @@
                 </configuration>
                 <deployer>
                     <type>installed</type>
-                    <deployables>
+            
                         <deployable>
                             <groupId>com.waltercedric</groupId>
                             <artifactId>myapplication-web</artifactId>
                             <type>war</type>
                         </deployable>
-                    </deployables>
+                    
                 </deployer>
             </configuration>
             <executions>
