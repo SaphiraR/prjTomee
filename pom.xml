@@ -66,60 +66,24 @@
 			</plugin>
 			<plugin>
 				 <groupId>org.codehaus.cargo</groupId>
-            <artifactId>cargo-maven2-plugin</artifactId>
-            <configuration>
-                <wait>true</wait>
-                <container>
-                    <containerId>tomee7x</containerId>
-                    <type>runtime</type>
-                </container>
-                <configuration>
-                    
-                    <properties>
-                        <cargo.host>10.126.43.136</cargo.host>
-			<cargo.port>8080</cargo.port>
-                        <cargo.remote.username>tomee</cargo.remote.username>
-                        <cargo.remote.password>saphira</cargo.remote.password>
-                    </properties>
-                </configuration>
-                <deployer>
-                    <type>installed</type>
-            
-                        
-                            
-                        
-                </deployer>
+				    <artifactId>cargo-maven2-plugin</artifactId>
+					<version>1.6.3</version>
+				    <configuration>
+					<container>
+					    <containerId>tomee7x</containerId>
+					    <type>remote</type>
+					</container>
+					<configuration>
+					    <type>runtime</type> 
+					    <properties>
+						<cargo.host>10.126.43.136</cargo.host>
+						<cargo.port>8080</cargo.port>
+						<cargo.remote.username>tomee</cargo.remote.username>
+						<cargo.remote.password>saphira</cargo.remote.password>
+					    </properties>
+					</configuration>
+					
             </configuration>
-            <executions>
-                <execution>
-                    <id>start-container</id>
-                    <phase>pre-integration-test</phase>
-                    <goals>
-                        <goal>deployer-deploy</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>stop-container</id>
-                    <phase>post-integration-test</phase>
-                    <goals>
-                        <goal>deployer-undeploy</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>verify-deploy</id>
-                    <phase>install</phase>
-                    <goals>
-                        <goal>deployer-deploy</goal>
-                    </goals>
-                </execution> 
-                <execution>
-                    <id>clean-undeploy</id>
-                    <phase>pre-clean</phase>
-                    <goals>
-                        <goal>deployer-undeploy</goal>
-                    </goals>
-                </execution> 
-            </executions>
 			</plugin>
 		</plugins>
 	</build>
